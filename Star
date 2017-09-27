@@ -12,5 +12,4 @@ def star(x,y):
     done()
 
 star(20,50)
-    
 
