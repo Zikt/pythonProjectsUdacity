@@ -1,0 +1,20 @@
+import turtle
+
+def drawSquare(p):    
+    for i in range(1,5):
+        p.forward(100)
+        p.right(90)
+
+def drawArt():
+    window = turtle.Screen()
+    window .bgcolor("red")
+    pen=turtle.Turtle()
+    pen.speed(40)
+    pen.color('yellow')
+    
+    for i in range(1,72):
+        drawSquare(pen)
+        pen.right(10)
+
+drawArt()
+
