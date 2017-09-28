@@ -1,0 +1,16 @@
+def readText():
+    text = open("C:\Python33\Udacity\profaneTexts.txt")
+    contents = text.read()
+    print(contents)
+    text.close()
+    
+readText()
+
+def openMusic():
+    music = open("C:\Users\IBMT\Music\-my heart, your home.mp3")
+
+    print('id of song =' , id(music))
+    music.close()
+    
+openMusic()
+                 
