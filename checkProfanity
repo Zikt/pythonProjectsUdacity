@@ -1,0 +1,26 @@
+import urllib
+
+def readText():
+    text = open("C:\Python33\Udacity\profaneTexts.txt")
+    contents = text.read()
+    print(contents)
+    text.close()
+    checkProfanity(contents)
+    
+
+def checkProfanity(tt):
+    link = urllib.urlopen(" http://www.wdylike.appspot.com/?q="+tt)
+    output = link.read()
+
+    link.close()
+
+    if "true" in output:
+        print("PROOFAANNNE!!!!")
+    elif "false" in output:
+        print(" This doc has no curse words!")
+    else:
+        print("Could not scan properly")
+            
+readText()
+
+                 
