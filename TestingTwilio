@@ -1,0 +1,15 @@
+from twilio.rest import Client
+
+# Your Account SID from twilio.com/console
+account_sid = "ACd152ebaf9d6356295470ac25c42**e**" #Replace with your account_sid
+# Your Auth Token from twilio.com/console
+auth_token  = "3f10b6e22***2d6d***906d9********" #Replace with your auth_token
+
+client = Client(account_sid, auth_token)
+
+message = client.messages.create(
+    to="+***25639***", #No you want to text.
+    from_="+1*286**9695", #your twilio no.
+    body="Hello from Delat Sys!")
+
+print(message.sid)
